@@ -19,12 +19,12 @@
 #include <stdint.h>
 
 int main(void)
-{
-    /* Loop forever */
-	int8_t x = 127; /*aqui lo que sucede es un overflow o desbordamiento ya que el bit de la izquierda es el mas significativo lo que nos muestra en el depurador al sumarle un 1 nos muestra el limite negaivo que seria -128 */
-    x= x + 1;
-    uint8_t y = 255; /*aqui pasa un desbordamiento sin signo ya que el bit esta configurado de 0 a 255 lo que sucede al sumarle el 1 es que idealmente quedaria un 100000000 pero al limitar la arquitectura a 8 bit el 1 de la izquierda desaparece y queda un 00000000 dadno un cero en el depurador*/
-    y = y + 1;
+{   
+    uint8_t result;
+    result = 0x0F + 0x01;/*prediccion debe dar 16*/
+    result = 0xFF + 0x01;/*prediccion debe dar 0 se desborda*/
+    result = 0xA0 + 0x5F;/*prediccion debe dar 255*/
+    result = 0xA0 + 0x60;/*prediccion debe dar 0 se desborda*/
     while(1){}
     
 
