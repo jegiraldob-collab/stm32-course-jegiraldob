@@ -21,9 +21,9 @@
 int main(void)
 {
     /* Loop forever */
-	uint8_t a = 200;
-    int8_t b = 200;
-    int8_t c = -1;
+	uint8_t a = 200; /*aqui se observa en el depurador un 200*/
+    int8_t b = 200; /*aqui observaremos un valor diferente ya que la variable es un entero de bit lo que el bit mas significativo indica el signo aqui seria -56*/
+    int8_t c = -1; /*observamos que en hexdecimal seria 0xFF*/
     while(1){}
     
 
