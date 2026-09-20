@@ -25,6 +25,7 @@ int main(void)
     uint16_t b = 255;
     uint32_t c = 255;
     uint8_t d = 256;
+    uint8_t e = 257;
     while(1){}
     
 
