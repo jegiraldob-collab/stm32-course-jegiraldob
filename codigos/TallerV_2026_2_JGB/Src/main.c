@@ -20,12 +20,16 @@
 
 int main(void)
 {   
-    uint8_t result;
-    result = 0x0F + 0x01;/*prediccion debe dar 16*/
-    result = 0xFF + 0x01;/*prediccion debe dar 0 se desborda*/
-    result = 0xA0 + 0x5F;/*prediccion debe dar 255*/
-    result = 0xA0 + 0x60;/*prediccion debe dar 0 se desborda*/
+    uint8_t x = 0;
+    x = 0x01;
+    x = 0x02;
+    x = 0x04;
+    x = 0x08;
+    x = 0x10;
+    x = 0x20;
+    x = 0x40;
+    x = 0x80;
     while(1){}
     
-
+/*aqui vemos como encender cada bit del micro*/
 }
