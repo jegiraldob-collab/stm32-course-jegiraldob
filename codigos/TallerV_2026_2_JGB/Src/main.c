@@ -21,9 +21,10 @@
 int main(void)
 {
     /* Loop forever */
-	uint8_t dec = 65;
-    uint8_t hex = 0x41;
-    uint8_t bin = 0b01000001;
+	uint8_t a = 255;
+    uint16_t b = 255;
+    uint32_t c = 255;
+    uint8_t d = 256;
     while(1){}
     
 
