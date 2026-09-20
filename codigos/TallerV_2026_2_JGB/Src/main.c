@@ -21,9 +21,10 @@
 int main(void)
 {
     /* Loop forever */
-	uint8_t a = 200; /*aqui se observa en el depurador un 200*/
-    int8_t b = 200; /*aqui observaremos un valor diferente ya que la variable es un entero de bit lo que el bit mas significativo indica el signo aqui seria -56*/
-    int8_t c = -1; /*observamos que en hexdecimal seria 0xFF*/
+	int8_t x = 127; /*aqui lo que sucede es un overflow o desbordamiento ya que el bit de la izquierda es el mas significativo lo que nos muestra en el depurador al sumarle un 1 nos muestra el limite negaivo que seria -128 */
+    x= x + 1;
+    uint8_t y = 255; /*aqui pasa un desbordamiento sin signo ya que el bit esta configurado de 0 a 255 lo que sucede al sumarle el 1 es que idealmente quedaria un 100000000 pero al limitar la arquitectura a 8 bit el 1 de la izquierda desaparece y queda un 00000000 dadno un cero en el depurador*/
+    y = y + 1;
     while(1){}
     
 
