@@ -21,11 +21,9 @@
 int main(void)
 {
     /* Loop forever */
-	uint8_t a = 255;
-    uint16_t b = 255;
-    uint32_t c = 255;
-    uint8_t d = 256;
-    uint8_t e = 257;
+	uint8_t a = 200;
+    int8_t b = 200;
+    int8_t c = -1;
     while(1){}
     
 
