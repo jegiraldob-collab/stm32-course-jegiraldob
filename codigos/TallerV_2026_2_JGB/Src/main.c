@@ -20,16 +20,17 @@
 
 int main(void)
 {   
-    uint8_t x = 0;
-    x = 0x01;
-    x = 0x02;
-    x = 0x04;
-    x = 0x08;
-    x = 0x10;
-    x = 0x20;
-    x = 0x40;
-    x = 0x80;
+    uint8_t a = 5;
+    uint8_t b = 0;
+    uint8_t c = 255;
+    uint8_t r1 = !a;
+    uint8_t r2 = !b;
+    uint8_t r3 = !c;
+    uint8_t r4 = ~c;
     while(1){}
-    
-/*aqui vemos como encender cada bit del micro*/
+    /* 
+ * ! (NO lógico): Evalúa la variable como un todo (0 = falso, !=0 = verdadero).
+ * ~ (NOT bitwise): Invierte cada uno de los 8 bits individuales (~5 de 00000101 pasa a 11111010).
+ */
+
 }
