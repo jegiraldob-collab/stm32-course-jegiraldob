@@ -20,13 +20,10 @@
 
 int main(void)
 {   
-    uint8_t a = 17;
-    uint8_t b = 5;
-    uint8_t div_result = a / b; /*nos deberia de arrojar un 3*/
-    uint8_t mod_result = a % b;/*nos deberia arroja un 2*/
-    uint8_t mul_result = a * b; /* nos deberia arrojar un 85*/
-
-
+    uint8_t x = 200;
+    uint8_t y = 100;
+    uint8_t sum = x + y;
+    /*En este ejercicio vemos como el desbordamiento al hacer la suma queda un noveno bit con un valor que no toma en cuenta ya que estamos en 8 bits la suma de 01100100 (100) + 11001000 (200) el resultado seria 100101100 pero al haber nueve bits el de mas a la izquierda se pierde quedando 00101100 que da un resultado de 44*/
 
     while(1){}
   
