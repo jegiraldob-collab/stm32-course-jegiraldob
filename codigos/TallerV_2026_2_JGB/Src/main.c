@@ -20,17 +20,15 @@
 
 int main(void)
 {   
-    uint8_t a = 5;
-    uint8_t b = 0;
-    uint8_t c = 255;
-    uint8_t r1 = !a;
-    uint8_t r2 = !b;
-    uint8_t r3 = !c;
-    uint8_t r4 = ~c;
+    uint8_t a = 17;
+    uint8_t b = 5;
+    uint8_t div_result = a / b; /*nos deberia de arrojar un 3*/
+    uint8_t mod_result = a % b;/*nos deberia arroja un 2*/
+    uint8_t mul_result = a * b; /* nos deberia arrojar un 85*/
+
+
+
     while(1){}
-    /* 
- * ! (NO lógico): Evalúa la variable como un todo (0 = falso, !=0 = verdadero).
- * ~ (NOT bitwise): Invierte cada uno de los 8 bits individuales (~5 de 00000101 pasa a 11111010).
- */
+  
 
 }
