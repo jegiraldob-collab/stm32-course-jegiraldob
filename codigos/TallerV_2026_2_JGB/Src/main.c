@@ -20,13 +20,11 @@
 
 int main(void)
 {   
-    uint8_t val = 3
+    uint8_t val = 0b10000000
     uint8_t left1 = val << 1;
-    uint8_t left2 = val << 2;
-    uint8_t left3 = val << 3;
-    uint8_t right1 = val >> 1;
-    /*Aqui observamos como se utiliza shift tanto para izquierda como para derecha, recordando que por cada salto a la izquirda se multiplica por 2 entonces si hay 3 saltos a la izquierda seria 2*2*2 y el numero dado, y hacia la derecha es la division entre 2 del numero en la variable*/
     
+    /*al saltar el 1 a la izquierda el patron bit queda 0b00000000 lo que nos daria un valor 0 ya que el 1 queda en el noveno bit y debido a la arquitectura este se pierda*/
+
     while(1){}
   
 
