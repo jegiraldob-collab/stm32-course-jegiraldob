@@ -20,11 +20,13 @@
 
 int main(void)
 {   
-    uint8_t x = 200;
-    uint8_t y = 100;
-    uint8_t sum = x + y;
-    /*En este ejercicio vemos como el desbordamiento al hacer la suma queda un noveno bit con un valor que no toma en cuenta ya que estamos en 8 bits la suma de 01100100 (100) + 11001000 (200) el resultado seria 100101100 pero al haber nueve bits el de mas a la izquierda se pierde quedando 00101100 que da un resultado de 44*/
-
+    uint8_t val = 3
+    uint8_t left1 = val << 1;
+    uint8_t left2 = val << 2;
+    uint8_t left3 = val << 3;
+    uint8_t right1 = val >> 1;
+    /*Aqui observamos como se utiliza shift tanto para izquierda como para derecha, recordando que por cada salto a la izquirda se multiplica por 2 entonces si hay 3 saltos a la izquierda seria 2*2*2 y el numero dado, y hacia la derecha es la division entre 2 del numero en la variable*/
+    
     while(1){}
   
 
