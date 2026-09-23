@@ -23,9 +23,10 @@ int main(void)
       uint8_t resultado_while = 0 ;
 
       uint8_t condicion = 0;
-      while(condicion){
-        resultado_while = 42;
-      }
+      
+      do{
+        resultado_dowhile=42;
+      }while(condicion);
       
 
 
