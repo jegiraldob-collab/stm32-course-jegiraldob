@@ -20,36 +20,17 @@
 
 int main(void)
 {   
-      
-    uint8_t a = 5;
-    uint8_t b = 0;
-    uint8_t c = 10;
+      uint8_t i = 0;
     
-    uint8_t result = 0;
+      uint8_t counter = 0;
+    
+    for(i=0;i<10;i++)
+    {
+        counter++;
+    }
 
-    if (a) {
-        result = 1; 
-    } else {
-        result = 0;
-    }
     
-    if (b) {
-        result = 2;
-    } else {
-        result = 3; 
-    }
-    
-    if (c == 10) {
-        result = 4; 
-    } else {
-        result = 5;
-    }
-    
-    while (1) {
-        
-    }
-    
-    
+while(1)
 
 
 }
