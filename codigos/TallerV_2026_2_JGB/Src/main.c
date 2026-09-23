@@ -20,12 +20,36 @@
 
 int main(void)
 {   
-    uint8_t val = 0b10000000
-    uint8_t left1 = val << 1;
+      
+    uint8_t a = 5;
+    uint8_t b = 0;
+    uint8_t c = 10;
     
-    /*al saltar el 1 a la izquierda el patron bit queda 0b00000000 lo que nos daria un valor 0 ya que el 1 queda en el noveno bit y debido a la arquitectura este se pierda*/
+    uint8_t result = 0;
 
-    while(1){}
-  
+    if (a) {
+        result = 1; 
+    } else {
+        result = 0;
+    }
+    
+    if (b) {
+        result = 2;
+    } else {
+        result = 3; 
+    }
+    
+    if (c == 10) {
+        result = 4; 
+    } else {
+        result = 5;
+    }
+    
+    while (1) {
+        
+    }
+    
+    
+
 
 }
