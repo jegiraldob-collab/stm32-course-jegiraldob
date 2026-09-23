@@ -20,14 +20,13 @@
 
 int main(void)
 {   
-      uint8_t i = 1 ; 
-    
-      uint16_t sum=0 ;
+      uint8_t resultado_while = 0 ;
 
-      while(i<=100){
-        sum+=i;
-        i++;
+      uint8_t condicion = 0;
+      while(condicion){
+        resultado_while = 42;
       }
+      
 
 
 
