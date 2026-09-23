@@ -24,7 +24,7 @@ int main(void)
     
       uint8_t counter = 0;
     
-     for(i=1;i<10;i+=2)
+     for(i=10;i>=1;i--)
      {
         counter++;
      }
