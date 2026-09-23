@@ -20,17 +20,21 @@
 
 int main(void)
 {   
-      uint8_t i = 0;
+      uint8_t i = 1 ; 
     
-      uint8_t counter = 0;
-    
-     for(i=10;i>=1;i--)
-     {
-        counter++;
-     }
+      uint16_t sum=0 ;
+
+      while(i<=100){
+        sum+=i;
+        i++;
+      }
+
+
 
     
-while(1)
+while(1){
+
+}
 
 
 }
