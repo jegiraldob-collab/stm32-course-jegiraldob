@@ -20,16 +20,34 @@
 
 int main(void)
 {   
-      uint8_t resultado_while = 0 ;
-
-      uint8_t condicion = 0;
+     uint8_t input=4;
+     uint8_t output=0;
       
-      do{
-        resultado_dowhile=42;
-      }while(condicion);
-      
+     switch(input){
+        case 1:
+        output=10;
+        break;
+    
+    
+        case 2:
+        output=20;
+        break;
+    
+    
+        case 3:
+        output=30;
+        break;
+    
+            case 4:
+        output=40;
+        break;
+    
+    
+        default:
+        output=255;
+        break;
 
-
+    
 
     
 while(1){
