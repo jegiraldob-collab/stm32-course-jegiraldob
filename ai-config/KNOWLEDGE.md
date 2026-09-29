@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 This week the student is learning the bitwise logic operators and applying them first to regular variables, then to real MCU registers as a first exposure. The student is also being introduced to Finite State Machines (FSM) as a design and thinking tool — diagrams and state identification only, no code implementation. Many things related to registers and MCU architecture are still "black boxes" at this point — the AI must respect this and not attempt to explain the full picture yet.
+=======
+This week the student is being introduced to the C programming language for the first time, working directly within VS Code with the STM32 extension pack connected to a real STM32F4xx microcontroller. There is no PC-based "Hello World" phase — the student uses the debugger and variable viewer as their primary feedback mechanism from day one. This is an intense week that covers the foundational C concepts needed for all future embedded programming.
+>>>>>>> week-01
 
 ---
 
@@ -20,11 +24,19 @@ The student does NOT know structures, unions, arrays, pointers, or enumerations.
 
 ## Current Learning Focus (Week 2)
 
+<<<<<<< HEAD
 ### Bitwise Logic Operators
+=======
+The student is learning the fundamentals of C programming within VS Code with the STM32 extension pack. All verification and feedback happens through the debugger and variable viewer — there is no `printf` or console output available. The specific concepts being learned this week are:
+>>>>>>> week-01
 
 The student is learning the following bitwise logic operators and their compound assignment forms:
 
+<<<<<<< HEAD
 AND (`&`), OR (`|`), NOT / bitwise complement (`~`), XOR (`^`), and the compound forms: OR-equals (`|=`) for setting bits, AND-equals with NOT (`&= ~()`) for clearing bits, and XOR-equals (`^=`) for toggling bits.
+=======
+Creating a project in VS Code with the STM32 extension pack (without CubeMX code generation), understanding the basic project skeleton, replacing the auto-generated `for(;;)` with `while(1){}`, using the debugger to set breakpoints, step through code, and inspect variable values in real time.
+>>>>>>> week-01
 
 The learning follows two stages within the week. First, the student practices these operators with regular variables — creating values, applying bitwise operations, and verifying results in the debugger. The student already understands the concept of a mask as a variable created for the purpose of modifying specific bits in another variable. Second, the student applies these operations to real MCU registers as a first exposure — specifically enabling the RCC clock signal for a GPIO peripheral and turning on an LED on GPIOA Pin 5.
 
