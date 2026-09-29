@@ -35,6 +35,8 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 # Add include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
+"/home/jeronimo/CMSIS/Include"
+"/home/jeronimo/CMSIS/Device/ST/STM32F4xx/Include"
   # User defined include directories
 )
 
@@ -45,6 +47,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 
 # Add additional defined symbols
 target_compile_definitions(${PROJECT_NAME} PRIVATE
+STM32F411xE
   # Add additional defined symbols here
 )
 

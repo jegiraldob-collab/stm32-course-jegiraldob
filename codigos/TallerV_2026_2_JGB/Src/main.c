@@ -16,43 +16,27 @@
  ******************************************************************************
  */
 
+
 #include <stdint.h>
+#include "stm32f4xx.h"
 
-int main(void)
-{   
-     uint8_t input=4;
-     uint8_t output=0;
-      
-     switch(input){
-        case 1:
-        output=10;
-        break;
-    
-    
-        case 2:
-        output=20;
-        break;
-    
-    
-        case 3:
-        output=30;
-        break;
-    
-            case 4:
-        output=40;
-        break;
-    
-    
-        default:
-        output=255;
-        break;
+int main (void)
+{
+    RCC->AHB1ENR |= (0b1 << 0); /*Enable GPIOA Clock*/
 
-    
+    GPIOA->MODER &= ~(0b11 << 5*2);
 
-    
-while(1){
+    GPIOA->MODER |= (0b01 << 5*2); /*Set PA5 as output*/
 
-}
+    GPIOA->OTYPER &= ~(0b1 << 5);
 
+    GPIOA->OSPEEDR &= ~(0b11 << (5 * 2));
 
+    GPIOA->PUPDR &= ~(0b11 << (5 * 2)); 
+
+    GPIOA->ODR |= (1 << 5);
+
+    while(1){
+
+    }
 }
