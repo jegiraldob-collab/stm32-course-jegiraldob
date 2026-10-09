@@ -17,12 +17,60 @@
  */
 
 #include <stdint.h>
+#include "stm32f411xe.h"
+#include "stm32f4xx.h"
+
+void init_gpio(void);
+void init_exti13(void);
+
+unit16_t aux_Value = 0;
+
 
 int main(void)
-{
-    /* Loop forever */
-	while(1){
 
+{//llamar las funciones
+    init_gpio();
+   
+    init_exti13();
+
+    /*loop forever*/
+    while(1){
+    
     }
     return 0;
+
 }
+
+void init_gpio(){
+
+    RCC->AHB1ENR &= ~RCC_AHB1ENR_GPIOCEN;
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+
+    GPIOC->MODER &= ~(GPIO_MODER_MODE13);   //MODO INPUT
+
+    GPIOC->PUPDR &= ~(GPIO_PUPDR_PUPD13);
+
+
+    aux_Value = (unit16_t) GPIOC->IDR;
+
+}
+
+void init_exti13 (){
+    RCC->APB2ENR &= ~(RCC_APB2ENR_SYSCFGEN);
+    RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
+    
+    SYSCFG->EXTICR4 &= ~(SYSCFG_EXTICR4_EXTI13);
+    SYSCFG->EXTICR4 |= SYSCFG_EXTICR4_EXTI13_PC;
+
+    EXTI->FTSR &= ~(EXTI_FTSR_TR13);
+    EXTI->FTSR |= EXTI_FTSR_TR13;
+    EXTI->RTSR &= ~(EXTI_RTSR_TR13);
+    EXTI->SWIER |= EXTI_SWIER_SWIER13;
+    EXTI->EMR |= EXTI_EMR_EM13;
+    EXTI->IMR &= ~(EXTI_IMR_IM13);
+    
+    NVIC_SetPriority(Exti15_10_IRQn,2);
+    
+    NVIC_EnableIRQ(Exti15_10_IRQn);
+
+}  

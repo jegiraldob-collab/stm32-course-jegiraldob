@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.20)
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_C_COMPILER_FORCED TRUE)
-set(CMAKE_CXX_COMPILER_FORCED TRUE)
+set(CMAKE_CXX_COMPILER_FORCED TRUE) 
 
 # Set target definition variables required by the toolchain file
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/target.cmake)
@@ -13,13 +13,15 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/target.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/gcc-arm-none-eabi.cmake)
 
 # Project definition
-project(intro_exti)
+project(EXTI_INTRODDUCCION)
 
 # Enable CMake support for ASM and C/CPP languages
 enable_language(C ASM)
 
-set(PROJECT_NAME intro_exti)
-set(CMSIS_ROOT "/home/carolina/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0")
+set(PROJECT_NAME EXTI_INTRODDUCCION)
+set(CMSIS_ROOT "/home/jeronimo/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0")
+
+
 # Create an executable object type
 add_executable(${PROJECT_NAME})
 
@@ -36,9 +38,9 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 # Add include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMSIS_ROOT}/Drivers/CMSIS/Core/Include 
-    ${CMSIS_ROOT}/Drivers/CMSIS/Device/ST/STM32F4xx/Include
-    # User defined include directories
+  ${CMSIS_ROOT}/Drivers/CMSIS/Core/Include 
+  ${CMSIS_ROOT}/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  # User defined include directories
 )
 
 # Compiler options
@@ -48,7 +50,6 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 
 # Add additional defined symbols
 target_compile_definitions(${PROJECT_NAME} PRIVATE
-  STM32F411xE
   # Add additional defined symbols here
 )
 
@@ -59,6 +60,7 @@ target_link_options(${PROJECT_NAME} PRIVATE
 
 # Add additional linker search directories
 target_link_directories(${PROJECT_NAME} PRIVATE
+  STM32F411xE
   # Add additional linker search directories here
 )
 
